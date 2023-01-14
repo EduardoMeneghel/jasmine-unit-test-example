@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "jasmine": "^4.5.0"
+  },
+  "dependencies": {
+    "jasmine-data-provider": "^2.2.0"
   }
 }
