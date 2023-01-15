@@ -1,13 +1,16 @@
 class Utilities{
 
-    fahrenheitToCelsius (fahrenheit) {
+    fahrenheitToCelsius(fahrenheit) {
         return (fahrenheit - 32) * 5/9;
     }
 
-    calculateAreaCircle (raio) {
+    calculateAreaCircle(raio) {
         return Math.PI * Math.pow(raio, 2);
     }
 
+    onlyNumbers(str){
+        return str.replace(/\D+/g, '');
+    }
     
 
 }

@@ -15,6 +15,15 @@ var using = require('jasmine-data-provider');
         expect(celsius).toEqual(-17.77777777777778)
     });
 
+    it('returns only numbers', function() {
+        let utilities = new Utilities();
+        let str = utilities.onlyNumbers("Luka Doncic went off for a historic triple-double (60 points, 21 rebounds, 10 assists) in the comeback win over the Knicks in overtime.")
+
+        expect(str).toContain("60");
+        expect(str).toContain("21");
+        expect(str).toContain("10");
+    });
+
     describe('test addition with data provider function', function () {
         var objectDataProvider = {
             'calculate the area of ​​a circle of 2 cm': {a: 2, expected: 12.566370614359172},
