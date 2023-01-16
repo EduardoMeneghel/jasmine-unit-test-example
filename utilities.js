@@ -11,6 +11,15 @@ class Utilities{
     onlyNumbers(str){
         return str.replace(/\D+/g, '');
     }
+
+    helloWorld(language){
+        const dicionary = {
+            pt: 'Olá mundo!',
+            en: 'Hello world!',
+            es: 'Hola mundo!'
+        }
+        return dicionary[language];
+    }
     
 
 }

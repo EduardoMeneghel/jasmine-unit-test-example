@@ -43,3 +43,21 @@ var using = require('jasmine-data-provider');
             });
         });
     });
+
+    describe('return message', function () {
+        var objectDataProvider = {
+            'check the return of the en language': {a: 'en', expected: 'Hello world!'},
+            'check the return of the pt language': {a: 'pt', expected: 'Olá mundo!'},
+            'check the return of the es language': {a: 'es', expected: 'Hola mundo!'},
+            'check the return of the ru language': {a: 'ru', expected: undefined}
+        };
+     
+        using(objectDataProvider, function (data, description) {
+            it(description, function () {
+                let utilities = new Utilities();
+                var result = utilities.helloWorld(data.a);
+     
+                expect(result).toEqual(data.expected);
+            });
+        });
+    });
