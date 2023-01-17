@@ -61,3 +61,11 @@ var using = require('jasmine-data-provider');
             });
         });
     });
+
+    it('check the answer', function() {
+        let utilities = new Utilities();
+        let data = utilities.findByUrl('https://api.adviceslip.com/advice/1');
+
+        expect(!data).toEqual(false);
+        /*Arrumar teste*/
+    });
